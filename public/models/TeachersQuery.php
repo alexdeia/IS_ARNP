@@ -31,4 +31,10 @@ class TeachersQuery extends \yii\db\ActiveQuery
     {
         return parent::one($db);
     }
+
+/*    public function getTeachers() {
+        $teachers = Yii::$app->db->createCommand('SELECT * FROM teachers')
+            ->queryAll();
+        return $teachers;
+    }*/
 }

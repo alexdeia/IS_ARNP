@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "teachers".
@@ -20,7 +21,9 @@ use Yii;
  *
  * @property Discipline[] $disciplines
  */
-class Teachers extends \yii\db\ActiveRecord
+
+
+class Teachers extends ActiveRecord
 {
     /**
      * @inheritdoc
@@ -50,15 +53,15 @@ class Teachers extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'FIO' => 'Fio',
-            'classes_subject' => 'Classes Subject',
-            'lead_practice' => 'Lead Practice',
-            'lead_krb' => 'Lead Krb',
-            'lead_magist' => 'Lead Magist',
-            'ped_practices' => 'Ped Practices',
-            'job_gak' => 'Job Gak',
-            'jobs_zav_kaf' => 'Jobs Zav Kaf',
-            'lead_aspir' => 'Lead Aspir',
+            'FIO' => 'ФИО',
+            'classes_subject' => 'Занятия по дисциплинам',
+            'lead_practice' => 'Рук-во практикой',
+            'lead_krb' => 'Рук-во КРБ',
+            'lead_magist' => 'Рук-во маг.диссертацией',
+            'ped_practices' => 'Пед. практика',
+            'job_gak' => 'Работа ГАК, защита',
+            'jobs_zav_kaf' => 'Работа по заданию зав.каф.',
+            'lead_aspir' => 'Рук-во аспирантами',
         ];
     }
 
@@ -78,4 +81,5 @@ class Teachers extends \yii\db\ActiveRecord
     {
         return new TeachersQuery(get_called_class());
     }
+    
 }

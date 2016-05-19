@@ -37,9 +37,23 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Главная', 'url' => ['/site/index']],
+            ['label' => 'Дисциплины','options' => ['id' => 'down_teachers'], 'items'=>[
+                ['label' => 'Все преподаватели', 'url' => ['/teachers/all'],'options' => ['id' => 'wn_history']],
+                ['label' => 'Добавить преподавателя', 'url' => ['/teachers/create'],'options' => ['id' => 'wn_history']],
+            ]],
+            ['label' => 'Преподаватели','options' => ['id' => 'down_teachers'], 'items'=>[
+                ['label' => 'Все преподаватели', 'url' => ['/teachers/all'],'options' => ['id' => 'wn_history']],
+                ['label' => 'Редактировать преподавателей', 'url' => ['/teachers'],'options' => ['id' => 'wn_history']],
+                ['label' => 'Добавить преподавателя', 'url' => ['/teachers/create'],'options' => ['id' => 'wn_history']],
+            ]],
+            ['label' => 'Другое','options' => ['id' => 'down_teachers'], 'items'=>[
+                ['label' => 'Количество студентов', 'url' => ['/teachers'],'options' => ['id' => 'wn_history']],
+                ['label' => 'Руководство магистрами', 'url' => ['/teachers/create'],'options' => ['id' => 'wn_history']],
+                ['label' => 'Нагрузка на кафедру', 'url' => ['/teachers/create'],'options' => ['id' => 'wn_history']],
+            ]],
             ['label' => 'О сайте', 'url' => ['/site/about']],
             ['label' => 'Контакты', 'url' => ['/site/contact']],
-            Yii::$app->user->isGuest ? (
+           /* Yii::$app->user->isGuest ? (
                 ['label' => 'Авторизация', 'url' => ['/site/login']]
             ) : (
                 '<li>'
@@ -50,7 +64,7 @@ AppAsset::register($this);
                 )
                 . Html::endForm()
                 . '</li>'
-            )
+            )*/
         ],
     ]);
     NavBar::end();

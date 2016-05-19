@@ -5,6 +5,8 @@ namespace app\controllers;
 use Yii;
 use app\models\Teachers;
 use app\models\TeachersSearch;
+use yii\data\Pagination;
+use yii\filters\PageCache;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -41,6 +43,27 @@ class TeachersController extends Controller
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    public function actionAll()
+    {
+        $query = Teachers::find();
+
+        $pagination = new Pagination([
+            'defaultPageSize' => 15,
+            'totalCount' => $query->count(),
+        ]);
+
+        $teachers = $query->orderBy('FIO')
+            ->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+
+
+        return $this->render('all', [
+            'teachers' => $teachers,
+            'pagination' => $pagination,
         ]);
     }
 
