@@ -50,8 +50,8 @@ AppAsset::register($this);
             ]],
             ['label' => 'Другое','options' => ['id' => 'down_other'], 'items'=>[
                 ['label' => 'Количество студентов', 'url' => ['/students'],'options' => ['id' => 'wn_history']],
-                ['label' => 'Руководство магистрами', 'url' => ['/teachers/create'],'options' => ['id' => 'wn_history']],
-                ['label' => 'Нагрузка на кафедру', 'url' => ['/teachers/create'],'options' => ['id' => 'wn_history']],
+                ['label' => 'Руководство магистрами', 'url' => ['/leadmagbak'],'options' => ['id' => 'wn_history']],
+                ['label' => 'Ставки и нагрузка', 'url' => ['/otherdata'],'options' => ['id' => 'wn_history']],
             ]],
             ['label' => 'О сайте', 'url' => ['/site/about']],
             ['label' => 'Контакты', 'url' => ['/site/contact']],
