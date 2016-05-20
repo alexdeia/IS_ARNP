@@ -37,9 +37,11 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Главная', 'url' => ['/site/index']],
-            ['label' => 'Дисциплины','options' => ['id' => 'down_teachers'], 'items'=>[
-                ['label' => 'Все преподаватели', 'url' => ['/teachers/all'],'options' => ['id' => 'wn_history']],
-                ['label' => 'Добавить преподавателя', 'url' => ['/teachers/create'],'options' => ['id' => 'wn_history']],
+            ['label' => 'Нагрузка', 'url' => ['/discipline/all']],
+            ['label' => 'Дисциплины','options' => ['id' => 'down_load'], 'items'=>[
+                ['label' => 'Все дисциплины', 'url' => ['/discipline/all'],'options' => ['id' => 'wn_history']],
+                ['label' => 'Редактировать дисциплины', 'url' => ['/discipline'],'options' => ['id' => 'wn_history']],
+                ['label' => 'Добавить дисциплину', 'url' => ['/discipline/create'],'options' => ['id' => 'wn_history']],
             ]],
             ['label' => 'Преподаватели','options' => ['id' => 'down_teachers'], 'items'=>[
                 ['label' => 'Все преподаватели', 'url' => ['/teachers/all'],'options' => ['id' => 'wn_history']],
