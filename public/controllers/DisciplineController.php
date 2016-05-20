@@ -5,6 +5,7 @@ namespace app\controllers;
 use Yii;
 use app\models\Discipline;
 use app\models\DisciplineSearch;
+use yii\data\Pagination;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -41,6 +42,27 @@ class DisciplineController extends Controller
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    public function actionAll()
+    {
+        $query = Discipline::find();
+
+        $pagination = new Pagination([
+            'defaultPageSize' => 15,
+            'totalCount' => $query->count(),
+        ]);
+
+        $discipline = $query->orderBy('name')
+            ->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+
+
+        return $this->render('all', [
+            'discipline' => $discipline,
+            'pagination' => $pagination,
         ]);
     }
 
