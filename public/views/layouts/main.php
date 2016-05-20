@@ -48,8 +48,8 @@ AppAsset::register($this);
                 ['label' => 'Редактировать преподавателей', 'url' => ['/teachers'],'options' => ['id' => 'wn_history']],
                 ['label' => 'Добавить преподавателя', 'url' => ['/teachers/create'],'options' => ['id' => 'wn_history']],
             ]],
-            ['label' => 'Другое','options' => ['id' => 'down_teachers'], 'items'=>[
-                ['label' => 'Количество студентов', 'url' => ['/teachers'],'options' => ['id' => 'wn_history']],
+            ['label' => 'Другое','options' => ['id' => 'down_other'], 'items'=>[
+                ['label' => 'Количество студентов', 'url' => ['/students'],'options' => ['id' => 'wn_history']],
                 ['label' => 'Руководство магистрами', 'url' => ['/teachers/create'],'options' => ['id' => 'wn_history']],
                 ['label' => 'Нагрузка на кафедру', 'url' => ['/teachers/create'],'options' => ['id' => 'wn_history']],
             ]],
