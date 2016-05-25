@@ -14,6 +14,7 @@ use yii\widgets\LinkPager;
     <thead>
     <tr>
         <th>ФИО</th>
+        <th>Дисциплина</th>
         <th>Занятия по дисциплинам</th>
         <th>Руководство практикой</th>
         <th>Руководства КРБ</th>
@@ -28,6 +29,14 @@ use yii\widgets\LinkPager;
     <?php foreach ($teachers as $teacher): ?>
     <tr>
         <td><?= $teacher->FIO ?></td>
+        <td><?php //foreach (\app\models\Discipline::find()->asArray()->all() as $item) echo $item['name'];
+            //foreach (\app\models\Teachers::find()->select('teachers.FIO')->join('discipline', '`teachers`.`id` = `discipline`.`teacher_id`')->all() as $item) echo $item['name'];  ?>
+            <ul>
+                <?php foreach ($teacher->disciplines as $d): ?>
+                    <li><?php echo $d->name; ?></li>
+                <? endforeach;?>
+            </ul>
+        </td>
         <td><?= $teacher->classes_subject ?></td>
         <td><?= $teacher->lead_practice ?></td>
         <td><?= $teacher->lead_krb ?></td>
@@ -37,7 +46,7 @@ use yii\widgets\LinkPager;
         <td><?= $teacher->jobs_zav_kaf ?></td>
         <td><?= $teacher->lead_aspir ?></td>
     </tr>
-    <?php endforeach;; ?>
+    <?php endforeach; ?>
     </tbody>
 </table>
 

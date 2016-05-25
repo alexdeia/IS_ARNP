@@ -49,7 +49,7 @@ class TeachersController extends Controller
     public function actionAll()
     {
         $query = Teachers::find();
-
+        
         $pagination = new Pagination([
             'defaultPageSize' => 15,
             'totalCount' => $query->count(),
@@ -59,6 +59,13 @@ class TeachersController extends Controller
             ->offset($pagination->offset)
             ->limit($pagination->limit)
             ->all();
+
+
+       /* $user = Yii::$app->db->CreateCommand()
+            ->select('')
+            ->from()
+            ->join()
+            ->queryRow();*/
 
 
         return $this->render('all', [

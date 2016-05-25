@@ -1,6 +1,7 @@
 <?php
 
 namespace app\models;
+use yii\db\ActiveRecord;
 
 /**
  * This is the ActiveQuery class for [[Discipline]].
@@ -31,4 +32,5 @@ class DisciplineQuery extends \yii\db\ActiveQuery
     {
         return parent::one($db);
     }
+    
 }

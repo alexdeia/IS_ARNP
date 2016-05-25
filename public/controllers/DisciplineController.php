@@ -2,10 +2,13 @@
 
 namespace app\controllers;
 
+use app\models\DisciplineQuery;
 use Yii;
 use app\models\Discipline;
 use app\models\DisciplineSearch;
 use yii\data\Pagination;
+use yii\db\Connection;
+use yii\db\Query;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -49,6 +52,14 @@ class DisciplineController extends Controller
     {
         $query = Discipline::find();
 
+/*        $queryLR = Yii::$app->db->createCommand('SELECT
+discipline.groups_lr * discipline.hours_on_group_lr
+AS
+LR
+FROM
+discipline');*/
+
+
         $pagination = new Pagination([
             'defaultPageSize' => 15,
             'totalCount' => $query->count(),
@@ -63,7 +74,9 @@ class DisciplineController extends Controller
         return $this->render('all', [
             'discipline' => $discipline,
             'pagination' => $pagination,
+            //'queryLR' => $queryLR,
         ]);
+
     }
 
     /**

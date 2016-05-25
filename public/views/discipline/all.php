@@ -33,22 +33,31 @@ use yii\web\View;
     </tr>
     </thead>
     <tbody>
-    <?php foreach ($discipline as $disciplines): // Тут наоборот названы переменные disciplines as discipline?>
+    <?php foreach ($discipline as $disciplines): // Тут наоборот названы переменные disciplines as discipline
+        $seminars = $disciplines->groups_sem * $disciplines->hours_on_group_sem;
+        $lr = $disciplines->groups_lr * $disciplines->hours_on_group_lr;
+        ?>
         <tr>
             <td><?= $disciplines->name ?></td>
             <td><?= $disciplines->lectures ?></td>
             <td><?= $disciplines->groups_sem ?></td>
             <td><?= $disciplines->hours_on_group_sem ?></td>
+            <td><?= $seminars ?></td>
             <td><?= $disciplines->groups_lr ?></td>
             <td><?= $disciplines->hours_on_group_lr ?></td>
+            <td><?= $lr ?></td>
+            <td><?= ($disciplines->lectures) + $lr + $seminars * 0.1 ?></td>
+            <td></td>
+            <td></td>
             <td><?= $disciplines->cons_ekz ?></td>
             <td><?= $disciplines->lead_krkp ?></td>
             <td><?= $disciplines->dz_ref ?></td>
+            <td>all</td>
         </tr>
     <?php endforeach;; ?>
     </tbody>
 </table>
 
-<?php  echo 2; ?>
+<?php  //var_dump($queryLR); ?>
 
 <?= LinkPager::widget(['pagination' => $pagination]) ?>
