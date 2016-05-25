@@ -3,6 +3,8 @@
 namespace app\models;
 
 use Yii;
+use yii\db\ActiveRecord;
+use yii\db;
 
 /**
  * This is the model class for table "discipline".
@@ -21,7 +23,7 @@ use Yii;
  *
  * @property Teachers $teacher
  */
-class Discipline extends \yii\db\ActiveRecord
+class Discipline extends ActiveRecord
 {
     /**
      * @inheritdoc
@@ -80,4 +82,12 @@ class Discipline extends \yii\db\ActiveRecord
     {
         return new DisciplineQuery(get_called_class());
     }
+
+/*    public function Seminars()
+    {
+        $db = new db\Connection();
+        $seminars = $db->createCommand('SELECT groups_sem FROM discipline')
+                        ->queryColumn();
+        return $seminars;
+    }*/
 }

@@ -81,5 +81,4 @@ class Teachers extends ActiveRecord
     {
         return new TeachersQuery(get_called_class());
     }
-    
 }
