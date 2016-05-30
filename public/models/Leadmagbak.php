@@ -29,8 +29,8 @@ class Leadmagbak extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'leader'], 'required'],
-            [['id', 'kit11', 'kit21', 'p4243'], 'integer'],
+            [['leader'], 'required'],
+            [['kit11', 'kit21', 'p4243'], 'integer'],
             [['leader'], 'string', 'max' => 255],
         ];
     }

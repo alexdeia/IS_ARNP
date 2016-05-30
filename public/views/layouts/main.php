@@ -27,7 +27,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'Система расчета нагрузки преподавателей вуза',
+        'brandLabel' => 'Система расчета нагрузки преподавателей вуза <sup>beta</sup>',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -53,8 +53,8 @@ AppAsset::register($this);
                 ['label' => 'Руководство магистрами', 'url' => ['/leadmagbak'],'options' => ['id' => 'wn_history']],
                 ['label' => 'Ставки и нагрузка', 'url' => ['/otherdata'],'options' => ['id' => 'wn_history']],
             ]],
-            ['label' => 'О сайте', 'url' => ['/site/about']],
-            ['label' => 'Контакты', 'url' => ['/site/contact']],
+            //['label' => 'О сайте', 'url' => ['/site/about']],
+            ['label' => 'Помощь', 'url' => ['/site/contact']],
            /* Yii::$app->user->isGuest ? (
                 ['label' => 'Авторизация', 'url' => ['/site/login']]
             ) : (

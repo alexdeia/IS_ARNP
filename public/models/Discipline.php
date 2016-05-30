@@ -53,16 +53,16 @@ class Discipline extends ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'teacher_id' => 'Teacher ID',
-            'lectures' => 'Lectures',
-            'groups_sem' => 'Groups Sem',
-            'hours_on_group_sem' => 'Hours On Group Sem',
-            'groups_lr' => 'Groups Lr',
-            'hours_on_group_lr' => 'Hours On Group Lr',
-            'cons_ekz' => 'Cons Ekz',
-            'lead_krkp' => 'Lead Krkp',
-            'dz_ref' => 'Dz Ref',
+            'name' => 'Дисциплина',
+            'teacher_id' => 'ID преподавателя',
+            'lectures' => 'Лекции',
+            'groups_sem' => 'Кол-во групп',
+            'hours_on_group_sem' => 'Часов на 1 группу (СЕМ)',
+            'groups_lr' => 'Кол-во групп',
+            'hours_on_group_lr' => 'Часов на 1 группу (ЛР)',
+            'cons_ekz' => 'Конс. экз.',
+            'lead_krkp' => 'Рук-во КР+КП',
+            'dz_ref' => 'ДЗ, реф-ты',
         ];
     }
 

@@ -33,8 +33,7 @@ class Students extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id'], 'required'],
-            [['id', 'kurs1', 'kurs2', 'kurs3', 'kurs4', 'mag1', 'mag2', 'kurs_its4'], 'integer'],
+            [['kurs1', 'kurs2', 'kurs3', 'kurs4', 'mag1', 'mag2', 'kurs_its4'], 'integer'],
             [['group'], 'string', 'max' => 255],
         ];
     }
@@ -46,14 +45,14 @@ class Students extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'group' => 'Group',
-            'kurs1' => 'Kurs1',
-            'kurs2' => 'Kurs2',
-            'kurs3' => 'Kurs3',
-            'kurs4' => 'Kurs4',
-            'mag1' => 'Mag1',
-            'mag2' => 'Mag2',
-            'kurs_its4' => 'Kurs Its4',
+            'group' => 'Группа',
+            'kurs1' => '1 курс',
+            'kurs2' => '2 курс',
+            'kurs3' => '3 курс',
+            'kurs4' => '4 курс',
+            'mag1' => '1 маг',
+            'mag2' => '2 маг',
+            'kurs_its4' => '4 курс ИТС',
         ];
     }
 

@@ -7,6 +7,8 @@
  */
 use yii\helpers\Html;
 use yii\widgets\LinkPager;
+
+$this->title = 'Все преподаватели';
 ?>
 
 <h1>Преподаватели</h1>
@@ -31,11 +33,9 @@ use yii\widgets\LinkPager;
         <td><?= $teacher->FIO ?></td>
         <td><?php //foreach (\app\models\Discipline::find()->asArray()->all() as $item) echo $item['name'];
             //foreach (\app\models\Teachers::find()->select('teachers.FIO')->join('discipline', '`teachers`.`id` = `discipline`.`teacher_id`')->all() as $item) echo $item['name'];  ?>
-            <ul>
                 <?php foreach ($teacher->disciplines as $d): ?>
-                    <li><?php echo $d->name; ?></li>
+                    <?php echo $d->name; ?><br>
                 <? endforeach;?>
-            </ul>
         </td>
         <td><?= $teacher->classes_subject ?></td>
         <td><?= $teacher->lead_practice ?></td>

@@ -39,9 +39,9 @@ class Teachers extends ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'FIO'], 'required'],
-            [['id', 'lead_krb', 'lead_magist', 'ped_practices', 'jobs_zav_kaf', 'lead_aspir'], 'integer'],
-            [['classes_subject', 'lead_practice', 'job_gak'], 'number'],
+            [['FIO'], 'required'],
+            [['lead_krb', 'lead_magist', 'ped_practices', 'jobs_zav_kaf', 'lead_aspir'], 'integer'],
+            [['classes_subject', 'lead_practice', 'job_gak', 'stavka'], 'number'],
             [['FIO'], 'string', 'max' => 255],
         ];
     }
@@ -62,6 +62,7 @@ class Teachers extends ActiveRecord
             'job_gak' => 'Работа ГАК, защита',
             'jobs_zav_kaf' => 'Работа по заданию зав.каф.',
             'lead_aspir' => 'Рук-во аспирантами',
+            'stavka' =>'Ставка',
         ];
     }
 

@@ -28,8 +28,7 @@ class Otherdata extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id'], 'required'],
-            [['id', 'lead_aspir', 'all_kaf'], 'integer'],
+            [['lead_aspir', 'all_kaf'], 'integer'],
             [['stavok'], 'number'],
         ];
     }

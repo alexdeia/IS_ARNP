@@ -38,6 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'job_gak',
             'jobs_zav_kaf',
             'lead_aspir',
+            'stavka',
         ],
     ]) ?>
 

@@ -9,6 +9,8 @@ use yii\helpers\Html;
 use yii\widgets\LinkPager;
 use app\models\Discipline;
 use yii\web\View;
+
+$this->title = 'Все дисциплины';
 ?>
 
 <h1>Дисциплины</h1>

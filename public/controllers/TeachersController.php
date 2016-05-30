@@ -49,7 +49,7 @@ class TeachersController extends Controller
     public function actionAll()
     {
         $query = Teachers::find();
-        
+
         $pagination = new Pagination([
             'defaultPageSize' => 15,
             'totalCount' => $query->count(),
