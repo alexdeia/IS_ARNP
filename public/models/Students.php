@@ -57,6 +57,14 @@ class Students extends \yii\db\ActiveRecord
     }
 
     /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getDiscipline()
+    {
+        return $this->hasOne(Students::className(), ['id' => 'kurs1']);
+    }
+
+    /**
      * @inheritdoc
      * @return StudentsQuery the active query used by this AR class.
      */

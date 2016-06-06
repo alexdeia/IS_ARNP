@@ -38,6 +38,8 @@ $this->title = 'Все дисциплины';
     <?php foreach ($discipline as $disciplines): // Тут наоборот названы переменные disciplines as discipline
         $seminars = $disciplines->groups_sem * $disciplines->hours_on_group_sem;
         $lr = $disciplines->groups_lr * $disciplines->hours_on_group_lr;
+        $cons = ($disciplines->lectures) + $lr + $seminars * 0.1;
+        $sum = $disciplines->lectures + $seminars + $lr + $cons + $disciplines->cons_ekz + $disciplines->lead_krkp + $disciplines->dz_ref;
         ?>
         <tr>
             <td><?= $disciplines->name ?></td>
@@ -48,15 +50,17 @@ $this->title = 'Все дисциплины';
             <td><?= $disciplines->groups_lr ?></td>
             <td><?= $disciplines->hours_on_group_lr ?></td>
             <td><?= $lr ?></td>
-            <td><?= ($disciplines->lectures) + $lr + $seminars * 0.1 ?></td>
-            <td></td>
+            <td><?= $cons ?></td>
+            <td><?php /* foreach ($disciplines->students as $st): ?>
+                    <?php echo $st->kurs1; ?><br>
+                <? endforeach; */?></td>
             <td></td>
             <td><?= $disciplines->cons_ekz ?></td>
             <td><?= $disciplines->lead_krkp ?></td>
             <td><?= $disciplines->dz_ref ?></td>
-            <td>all</td>
+            <td><?= $sum ?></td>
         </tr>
-    <?php endforeach;; ?>
+    <?php endforeach; ?>
     </tbody>
 </table>
 

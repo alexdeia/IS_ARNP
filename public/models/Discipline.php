@@ -74,6 +74,11 @@ class Discipline extends ActiveRecord
         return $this->hasOne(Teachers::className(), ['id' => 'teacher_id']);
     }
 
+    public function getStudents()
+    {
+        return $this->hasMany(Discipline::className(), ['id' => 'id']);
+    }
+
     /**
      * @inheritdoc
      * @return DisciplineQuery the active query used by this AR class.

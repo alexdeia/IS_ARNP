@@ -37,7 +37,7 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Главная', 'url' => ['/site/index']],
-            ['label' => 'Нагрузка', 'url' => ['/discipline/all']],
+            ['label' => 'Нагрузка', 'url' => ['/teachers/all']],
             ['label' => 'Дисциплины','options' => ['id' => 'down_load'], 'items'=>[
                 ['label' => 'Все дисциплины', 'url' => ['/discipline/all'],'options' => ['id' => 'wn_history']],
                 ['label' => 'Редактировать дисциплины', 'url' => ['/discipline'],'options' => ['id' => 'wn_history']],

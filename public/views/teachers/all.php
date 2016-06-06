@@ -37,7 +37,9 @@ $this->title = 'Все преподаватели';
                     <?php echo $d->name; ?><br>
                 <? endforeach;?>
         </td>
-        <td><?= $teacher->classes_subject ?></td>
+        <td><?php foreach ($teacher->disciplines as $d): ?>
+                <?php echo $d->lectures; ?><br>
+            <? endforeach;?><br></td>
         <td><?= $teacher->lead_practice ?></td>
         <td><?= $teacher->lead_krb ?></td>
         <td><?= $teacher->lead_magist ?></td>

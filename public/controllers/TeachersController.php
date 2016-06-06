@@ -60,7 +60,6 @@ class TeachersController extends Controller
             ->limit($pagination->limit)
             ->all();
 
-
        /* $user = Yii::$app->db->CreateCommand()
             ->select('')
             ->from()
