@@ -9,9 +9,9 @@ $this->title = 'Главная - ARNP';
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Здравствуйте!</h1>
+        <h1>Работа с системой</h1>
 
-        <p class="lead">Начните работать с системой прямо сейчас.</p>
+        <p class="lead">Начните работать с системой прямо сейчас. <br> Заполните необходимые данные для расчётов.</p>
 
     </div>
 
@@ -22,30 +22,26 @@ $this->title = 'Главная - ARNP';
                 <h2>Преподаватели</h2>
 
                 <p>
+                    Добавление и редактирование данных о преподавателях (ФИО, часы).
                 </p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Перейти &raquo;</a></p>
+                <p><a class="btn btn-default" href="index.php?r=teachers">Перейти к заполнению преподавателей &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2>Дисциплины</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+                <p>Добавление и редактирование данных о дисциплинах (название, код преподавателя, количество студентов, часы).</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Перейти &raquo;</a></p>
+                <p><a class="btn btn-default" href="index.php?r=discipline/">Перейти к заполнению дисциплин &raquo;</a></p>
             </div>
             <div class="col-lg-4">
-                <h2>Студенты и аспиранты</h2>
+                <h2>Студенты и другое</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+                <p>Добавление и редактирование данных о количестве студентов на кафедре и руководителях. Настройка общего количества ставок и общая нагрузка на кафедру.</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Перейти к заполнению студентов &raquo;</a></p>
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Перейти к заполнению аспирантов &raquo;</a></p>
+                <p><a class="btn btn-default" href="index.php?r=students">Перейти к заполнению студентов &raquo;</a></p>
+                <p><a class="btn btn-default" href="index.php?r=leadmagbak">Перейти к заполнению руководителей &raquo;</a></p>
+                <p><a class="btn btn-default" href="index.php?r=otherdata">Перейти к заполнению ставок и нагрузки &raquo;</a></p>
             </div>
         </div>
 
